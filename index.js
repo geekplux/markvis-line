@@ -30,8 +30,6 @@ function line({
   lineWidth: _lineWidth = 1.5,
   lineColor: _lineColor = 'steelblue',
   isCurve: _isCurve = true,
-  tickSize: _tickSize = 5,
-  tickPadding: _tickPadding = 5,
   export: _export = false,
 } = {}) {
   let _d3;
@@ -69,12 +67,6 @@ function line({
         .rangeRound([0, width]);
   const yScale = _d3.scaleLinear()
         .rangeRound([height, 0]);
-  const xAxis = _d3.axisBottom(xScale)
-        .tickSize(_tickSize)
-        .tickPadding(_tickPadding);
-  const yAxis = _d3.axisLeft(yScale)
-        .tickSize(_tickSize)
-        .tickPadding(_tickPadding);
 
   const lineChart = _d3.line()
         .x(d => xScale(d.key))
@@ -87,9 +79,9 @@ function line({
 
   g.append('g')
     .attr('transform', `translate(0, ${height})`)
-    .call(xAxis);
+    .call(_d3.axisBottom(xScale));
 
-  g.append('g').call(yAxis);
+  g.append('g').call(_d3.axisLeft(yScale));
 
   g.append('path')
     .datum(data)
