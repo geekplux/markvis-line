@@ -1,0 +1,28 @@
+{
+  "name": "markvis-line",
+  "version": "0.0.0",
+  "description": "markvis-line",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./example",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/geekplux/markvis-line.git"
+  },
+  "keywords": [
+    "d3",
+    "vis",
+    "visualization",
+    "markvis",
+    "markvis-plugin",
+    "markvis-line"
+  ],
+  "author": "GeekPlux <geekplux@gmail.com> (https://github.com/geekplux)",
+  "license": "MIT",
+  "devDependencies": {
+    "d3-node": "^1.0.3",
+    "d3node-output": "^0.0.9"
+  }
+}
