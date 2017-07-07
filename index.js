@@ -26,7 +26,7 @@ function line({
   style: _style = '',
   width: _width = 960,
   height: _height = 500,
-  margin: _margin = { top: 20, right: 20, bottom: 60, left: 30 },
+  margin: _margin = { top: 20, right: 20, bottom: 20, left: 20 },
   lineWidth: _lineWidth = 1.5,
   lineColor: _lineColor = 'steelblue',
   isCurve: _isCurve = true,
@@ -58,12 +58,12 @@ function line({
   const width = _width - _margin.left - _margin.right;
   const height = _height - _margin.top - _margin.bottom;
 
-  svg.attr('width', _width)
+  const gWrap = svg.attr('width', _width)
     .attr('height', _height)
     .append('g')
     .attr('transform', `translate(${_margin.left}, ${_margin.top})`);
 
-  const g = svg.append('g');
+  const g = gWrap.append('g');
 
   const xScale = _d3.scaleLinear()
         .rangeRound([0, width]);
