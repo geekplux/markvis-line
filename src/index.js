@@ -37,7 +37,7 @@ function line ({
   style: _style = '',
   width: _width = 960,
   height: _height = 500,
-  margin: _margin = { top: 20, right: 20, bottom: 20, left: 20 },
+  margin: _margin = { top: 20, right: 20, bottom: 20, left: 30 },
   lineWidth: _lineWidth = 1.5,
   lineColor: _lineColor = 'steelblue',
   isCurve: _isCurve = true,
@@ -51,6 +51,7 @@ function line ({
   const isNodeEnv = () => D3Node // To check node environment
 
   if (isNodeEnv) {
+    // Node environment
     d3n = new D3Node({
       selector: _selector,
       styles: _style,
@@ -59,11 +60,12 @@ function line ({
     _d3 = d3n.d3
     svg = d3n.createSVG()
   } else {
+    // Browser environment
     _div = document.createElement('div')
     _div.innerHTML = _container
     _d3 = d3
     svg = _d3.select(_div).select('#chart').append('svg')
-    addStyle(_style)
+    addStyle(_style) // Add style for line chart in browser
   }
 
   const width = _width - _margin.left - _margin.right

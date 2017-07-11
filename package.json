@@ -3,7 +3,6 @@
   "version": "0.0.3",
   "description": "Line chart generator for markvis in browser and node.js",
   "main": "./dist/index",
-  "module": "index",
   "scripts": {
     "example": "node ./example",
     "lint": "xo",
