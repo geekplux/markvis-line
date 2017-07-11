@@ -50,13 +50,13 @@ Data from file or web processed by d3 library.
 
 - Type: `Object`
 
-`d3` library which used in **browser** environment.
+[d3](https://github.com/d3/d3) library which used in **browser** environment.
 
 ##### d3node
 
 - Type: `Object`
 
-`d3-node` library which used in **node** environment.
+[d3-node](https://github.com/d3-node/d3-node) constructor which used in **node** environment.
 
 ##### selector
 
@@ -77,7 +77,7 @@ DOM contained the visualization result.
 - Type: `String`<br>
 - Default: `''`
 
-Linechart style.
+Line chart style.
 
 ##### width
 
@@ -96,7 +96,7 @@ SVG height for line chart.
 ##### margin
 
 - Type: `Object`<br>
-- Default: `{ top: 20, right: 20, bottom: 20, left: 20 }`
+- Default: `{ top: 20, right: 20, bottom: 20, left: 30 }`
 
 Margin of the first <g> wrapper in SVG, usually used to add axis.
 
@@ -142,4 +142,4 @@ Whether to export to a PNG image.
 **markvis-line** © [geekplux](https://github.com/geekplux), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by geekplux with help from contributors ([list](https://github.com/geekplux/markvis/contributors)).
 
-> [github.com/geekplux](https://github.com/geekplux) · GitHub [@geekplux](https://github.com/geekplux) · Twitter [@geekplux](https://twitter.com/geekplux)
+> [geekplux.com](http://geekplux.com) · GitHub [@geekplux](https://github.com/geekplux) · Twitter [@geekplux](https://twitter.com/geekplux)

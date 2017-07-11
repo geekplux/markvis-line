@@ -25,7 +25,7 @@ function line() {
       _ref$height = _ref.height,
       _height = _ref$height === undefined ? 500 : _ref$height,
       _ref$margin = _ref.margin,
-      _margin = _ref$margin === undefined ? { top: 20, right: 20, bottom: 20, left: 20 } : _ref$margin,
+      _margin = _ref$margin === undefined ? { top: 20, right: 20, bottom: 20, left: 30 } : _ref$margin,
       _ref$lineWidth = _ref.lineWidth,
       _lineWidth = _ref$lineWidth === undefined ? 1.5 : _ref$lineWidth,
       _ref$lineColor = _ref.lineColor,
