@@ -1,6 +1,6 @@
 {
   "name": "markvis-line",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Line chart generator for markvis in browser and node.js",
   "main": "./dist/index",
   "module": "index",
