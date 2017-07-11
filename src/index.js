@@ -1,5 +1,5 @@
 /**
- * @fileOverview Generate bar chart for markvis
+ * @fileOverview Generate line chart for markvis
  * @name index.js<src>
  * @author GeekPlux
  * @license MIT
@@ -13,7 +13,7 @@ const { addStyle } = require('./utils')
  * @param {function} D3Node D3Node will get in node environment
  * @param {string} selector DOM selector in container
  * @param {string} container DOM contained the visualization result
- * @param {string} style Bar chart style
+ * @param {string} style Line chart style
  * @param {number} width
  * @param {number} height
  * @param {object} margin
@@ -45,7 +45,7 @@ function line ({
 } = {}) {
   let _d3 // Instance of d3
   let d3n // Instance of D3Node
-  let svg // SVG element held the bar chart
+  let svg // SVG element held the line chart
   let _div // Temporary DOM element used to operate
 
   const isNodeEnv = () => D3Node // To check node environment

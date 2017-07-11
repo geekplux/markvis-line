@@ -1,6 +1,8 @@
 ## LineChart
 
-LineChart generator for [markvis](https://github.com/geekplux/markvis) in browser and node.js.
+> Line chart generator for [markvis](https://github.com/geekplux/markvis) in browser and node.js.
+
+[![NPM version](https://img.shields.io/npm/v/markvis-line.svg?style=flat-square)](https://npmjs.com/package/markvis-line) [![NPM downloads](https://img.shields.io/npm/dm/markvis-line.svg?style=flat-square)](https://npmjs.com/package/markvis-line) [![Build](https://travis-ci.org/geekplux/markvis-line.svg?style=flat-square)](https://travis-ci.org/geekplux/markvis-line) [![Coverage](https://coveralls.io/repos/github/geekplux/markvis-line/badge.svg?style=flat-square)](https://coveralls.io/github/geekplux/markvis-line) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](https://geekplux.github.io/donate)
 
 ## Install
 
@@ -21,13 +23,13 @@ const line = markvisLine({ data, d3, d3node })
 
 Check out the [example](./example) for usage.
 
-##### Output the visualization result to a image
+#### Output the visualization result to a image
 
 ```
-npm start
+npm run example
 ```
 
-## Output Preview (png):
+#### Output Preview (png):
 
 ![chart](./example/output.png)
 
@@ -68,7 +70,7 @@ DOM selector in container.
 - Type: `String`
 - Default: `<div id="container"><h2>Line Chart</h2><div id="chart"></div></div>`
 
-DOM contain the visualization result.
+DOM contained the visualization result.
 
 ##### style
 
@@ -76,6 +78,55 @@ DOM contain the visualization result.
 - Default: `''`
 
 Linechart style.
+
+##### width
+
+- Type: `Number`<br>
+- Default: `960`
+
+SVG width for line chart.
+
+##### height
+
+- Type: `Number`<br>
+- Default: `500`
+
+SVG height for line chart.
+
+##### margin
+
+- Type: `Object`<br>
+- Default: `{ top: 20, right: 20, bottom: 20, left: 20 }`
+
+Margin of the first <g> wrapper in SVG, usually used to add axis.
+
+##### lineWidth
+
+- Type: `Number`<br>
+- Default: `1.5`
+
+Width of line.
+
+##### lineColor
+
+- Type: `string`<br>
+- Default: `steelblue`
+
+Color of line.
+
+##### isCurve
+
+- Type: `boolean`<br>
+- Default: `true`
+
+Whether the line chart is curve.
+
+##### export
+
+- Type: `boolean`<br>
+- Default: `false`
+
+Whether to export to a PNG image.
 
 ## Contributing
 

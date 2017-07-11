@@ -14,7 +14,7 @@ function removeAllSpace (str) {
   return str.replace(/\s+/g, '')
 }
 
-test('bar chart generator', () => {
+test('line chart generator', () => {
   expect(line).toBeDefined()
   expect(removeAllSpace(line({ data, d3node }))).toBe(removeAllSpace(result))
 })

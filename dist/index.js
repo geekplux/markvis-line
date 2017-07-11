@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @fileOverview Generate bar chart for markvis
+ * @fileOverview Generate line chart for markvis
  * @name index.js<src>
  * @author GeekPlux
  * @license MIT
