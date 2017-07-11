@@ -1,11 +1,17 @@
 {
   "name": "markvis-line",
   "version": "0.0.2",
-  "description": "markvis-line",
-  "main": "index.js",
+  "description": "Line chart generator for markvis in browser and node.js",
+  "main": "./dist/index",
+  "module": "index",
   "scripts": {
-    "start": "node ./example",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "example": "node ./example",
+    "lint": "xo",
+    "build": "rm -rf ./dist && mkdir dist && ./node_modules/.bin/babel src -d dist",
+    "prepublish": "npm run build",
+    "test": "jest && npm run lint",
+    "test:cover": "jest --coverage",
+    "test:cover:travis": "npm run test:cover && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
@@ -22,7 +28,24 @@
   "author": "GeekPlux <geekplux@gmail.com> (https://github.com/geekplux)",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "coveralls": "^2.13.1",
     "d3-node": "^1.0.3",
-    "d3node-output": "^0.0.9"
+    "d3node-output": "^0.0.9",
+    "eslint-config-geekplux": "^1.0.3",
+    "jest": "^20.0.4",
+    "uglify-js": "^3.0.24",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "extends": "geekplux",
+    "esnext": true,
+    "envs": [
+      "jest"
+    ],
+    "rules": {
+      "no-useless-escape": 0
+    }
   }
 }
