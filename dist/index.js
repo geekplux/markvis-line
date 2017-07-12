@@ -44,7 +44,7 @@ function line() {
     return D3Node;
   };
 
-  if (isNodeEnv) {
+  if (isNodeEnv()) {
     d3n = new D3Node({
       selector: _selector,
       styles: _style,
@@ -92,7 +92,7 @@ function line() {
   g.append('path').datum(data).attr('fill', 'none').attr('stroke', _lineColor).attr('stroke-width', _lineWidth).attr('d', lineChart);
 
   var result = void 0;
-  if (isNodeEnv) {
+  if (isNodeEnv()) {
     if (_export) result = d3n;else result = d3n.chartHTML();
   } else result = _div.querySelector('#container').innerHTML;
 
