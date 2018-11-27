@@ -93,6 +93,13 @@ SVG width for line chart.
 
 SVG height for line chart.
 
+##### responsive
+
+- Type: `boolean`<br>
+- Default: `false`
+
+Whether the chart should be automatically resized to fit its container. If true, `width` and `height` options are used for the initial sizing/SVG viewBox size.
+
 ##### margin
 
 - Type: `Object`<br>
@@ -113,6 +120,41 @@ Width of line.
 - Default: `steelblue`
 
 Color of line.
+
+##### showXAxis
+
+- Type: `boolean`<br>
+- Default: `true`
+
+Whether to show the X axis.
+
+##### showYAxis
+
+- Type: `boolean`<br>
+- Default: `true`
+
+Whether to show the Y axis.
+
+##### showValues
+
+- Type: `boolean`<br>
+- Default: `true`
+
+Whether to show values above each point.
+
+##### showDots
+
+- Type: `boolean`
+- Default: `true`
+
+Whether to show dots at each point.
+
+##### dotAttrs
+
+- Type: `Object`<br>
+- Default: `{}`
+
+Attributes set on each dot element (only if `showDots` is `true`).
 
 ##### isCurve
 

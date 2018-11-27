@@ -16,5 +16,5 @@ function removeAllSpace (str) {
 
 test('line chart generator', () => {
   expect(line).toBeDefined()
-  expect(removeAllSpace(line({ data, d3node }))).toBe(removeAllSpace(result))
+  expect(removeAllSpace(line({ data, d3node, showDots: false, showValues: false }))).toBe(removeAllSpace(result))
 })
