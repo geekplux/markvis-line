@@ -26,6 +26,7 @@ const { addStyle } = require('./utils')
  * @param {number} lineWidth
  * @param {string} lineColor
  * @param {boolean} isCurve Whether the line chart is curve
+ * @param {boolean} curveType
  * @param {boolean} export Whether to export to a PNG image
  * @returns {}
  */
@@ -53,6 +54,7 @@ function line ({
   lineWidth: _lineWidth = 1.5,
   lineColor: _lineColor = 'steelblue',
   isCurve: _isCurve = true,
+  curveType: _curveType = 'curveMonotoneX',
   export: _export = false
 } = {}) {
   let _d3 // Instance of d3
@@ -105,7 +107,7 @@ function line ({
         .x(d => xScale(d.key))
         .y(d => yScale(d.value))
 
-  if (_isCurve) lineChart.curve(_d3.curveBasis)
+  if (_isCurve) lineChart.curve(_d3[_curveType])
 
   xScale.domain(_d3.extent(data, d => d.key))
   yScale.domain(_d3.extent(data, d => d.value))

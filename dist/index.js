@@ -44,6 +44,8 @@ function line() {
       _lineColor = _ref$lineColor === undefined ? 'steelblue' : _ref$lineColor,
       _ref$isCurve = _ref.isCurve,
       _isCurve = _ref$isCurve === undefined ? true : _ref$isCurve,
+      _ref$curveType = _ref.curveType,
+      _curveType = _ref$curveType === undefined ? 'curveMonotoneX' : _ref$curveType,
       _ref$export = _ref.export,
       _export = _ref$export === undefined ? false : _ref$export;
 
@@ -94,7 +96,7 @@ function line() {
     return yScale(d.value);
   });
 
-  if (_isCurve) lineChart.curve(_d3.curveBasis);
+  if (_isCurve) lineChart.curve(_d3[_curveType]);
 
   xScale.domain(_d3.extent(data, function (d) {
     return d.key;
